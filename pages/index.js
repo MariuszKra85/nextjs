@@ -1,12 +1,20 @@
+import { useQuery } from '@apollo/client';
+import gql from 'graphql-tag';
 
+const QUERY_USER = gql`
+  query {
+    allUsers {
+      name
+    }
+  }
+`;
 
 export default function Home() {
+  const { data, loading, error } = useQuery(QUERY_USER);
   return (
     <div>
+      <p>{console.log(data)}</p>
       <p>I love you my sweet little girl!!!</p>
-      <div>
-        ja nie wiem co sie z tym dzieje vercel przestał dziać
-      </div>
     </div>
   );
 }
