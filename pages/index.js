@@ -14,9 +14,9 @@ export default function Home() {
   const { data, loading, error } = useQuery(QUERY_USER);
   return (
     <div>
-      <p>{console.log(data?)}</p>
+      <p>{console.log(data)}</p>
       <p>I love you my sweet little girl!!!</p>
-      <p>it is work?  abc</p>
+      <p>it is work? abc</p>
     </div>
   );
 }
