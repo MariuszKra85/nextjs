@@ -1,3 +1,4 @@
+import { useQuery } from '@apollo/client';
 import gql from 'graphql-tag';
 
 const All_USER = gql`
@@ -9,6 +10,9 @@ const All_USER = gql`
 `;
 
 export default function Home() {
+  const { data, error, loading } = useQuery(All_USER);
+  console.log('dziala');
+  console.log('data');
   return (
     <div>
       <p>I love you my sweet little girl!!!</p>
