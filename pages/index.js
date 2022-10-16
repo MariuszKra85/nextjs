@@ -1,3 +1,13 @@
+import gql from 'graphql-tag';
+
+const All_USER = gql`
+  query {
+    allUsers {
+      id
+    }
+  }
+`;
+
 export default function Home() {
   return (
     <div>
